@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dunham_Lesson3</title>
+	<meta charset="utf-8" />
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href="styles.css" rel="stylesheet" />
+    <script async defer src="https://maps.googleapis.com/maps/api/js?&callback=initMap"></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&amp;language=en"> </script>
+    <script src="Scripts/gmap3.js"></script>
+    <script src="Scripts/JavaScript.js"></script>
+</head>
+<body>
+    
+    <div id="map-canvas"></div>
+
+    <div class="container-fluid" id="main">
+        <div class="row">
+            <div class="col-xs-8" id="left">
+
+                <h1><strong>Lesson 3 Google Maps API </strong></h1>
+                <div class="panel panel-default">
+                    <div class="panel-heading"><h4>Technology Stack</h4></div>
+                </div>
+                <p>
+                    This project was built using Visual Studio 2015 and the ASP.NET framework.
+                    This project is being served via IIS running on a AWS t.2 micro instance. 
+                    The Google Maps API is being used to deliver the mapping content. 
+                    Bootstrap was used as the framework for the webpage with credit
+                    given to <a href="http://bootstrapzero.com/bootstrap-template/google-maps">bootstrapzero</a>
+                    for a starting template.
+                </p>
+                <hr>
+                <div class="panel panel-default">
+                    <div class="panel-heading"><h4>The Process</h4></div>
+                </div>
+                <p>
+                    The largest challange I encountered was figuring out how to get the Google Maps API to work with Bootstrap.
+                    Initially, I tried to use the JavaScript code direct from the Google API page, but the map would not render
+                    inside the Bootstrapped page. If I removed the Bootstrap functionality from the page everything worked fine. 
+                    After some research, I discovered that I needed to create an event listener that would initialize the function 
+                    after the page had finished loading. After setting up the listener, I no longer had any issues. A smalller issue
+                    that I encountered was making the pages respond appropriately for its intended destination. I originally
+                    developed the page on a very large monitor, but it was intended to be displayed on a 980px wide section in my
+                    portfolio. This was the main reason for using the bootstrap framework. I was able to develop a suitable 
+                    compromise for both my large screen monitor and a smaller display.
+                </p>
+                <p>
+                    I also experiement with a JQuery API titled gmap3. I eventually commneted this code out from the project, but I
+                    found the gmap3 API much easier to work with and will likely build all of my professional maps with this
+                    API in the future. I downloaded the JQuery plugin from <a href="https://github.com/jbdemonte/gmap3.git">GitHub </a>.
+                    If you would like to see the code for this project you could  examine the developer tools or it can be found here 
+                    on <a href="https://github.com/dunhamspatial/lesson3">GitHub</a>.
+                </p>
+
+                <hr>
+            </div>         
+        </div>
+    </div>
+</body>
+</html>
